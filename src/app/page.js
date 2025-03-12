@@ -87,11 +87,13 @@ export default function Home() {
         <div className="relative h-[500px] rounded-xl overflow-hidden shadow-2xl transform transition-all hover:scale-102 group">
           <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/40 to-transparent z-10"></div>
           <Image
-            src="/camioneros2.webp"
-            alt="Nuestra empresa"
-            fill
-            className="object-cover transition-transform duration-5000 group-hover:scale-110"
-          />
+        src="/camioneros2.webp"
+        alt="Nuestra empresa"
+        layout="fill" // Ajusta automáticamente el tamaño
+        objectFit="cover" // Asegura que la imagen cubra el espacio
+        className="transition-transform duration-500 group-hover:scale-110"
+        priority // Carga la imagen más rápido
+      />
           <div className="absolute bottom-6 right-6 z-20">
             <div className="px-4 py-2 bg-white/90 rounded-lg text-[#126491] font-bold shadow-lg">
               5 años de experiencia
