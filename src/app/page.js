@@ -8,7 +8,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 export default function Home() {
   return (
-<>
+    <>
       <Nabvar />
 
 
@@ -53,219 +53,219 @@ export default function Home() {
         </section>
 
 
-{/* Quienes Somos - Versión mejorada sin animaciones */}
-<section id="quienes-somos" className="py-24 bg-white relative overflow-hidden">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-col md:flex-row items-center gap-16">
-      <div className="md:w-1/2 z-10">
-        <div className="relative mb-8">
-          <h2 className="text-5xl font-bold text-[#126491] mb-2">Quiénes Somos</h2>
-          <div className="w-32 h-1 bg-[#af5661] mt-2"></div>
-          <div className="w-20 h-1 bg-[#af5661] mt-2 ml-6"></div>
-        </div>
-        <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-          Somos una empresa Santandereana de transporte de carga, con <span className="font-bold text-[#126491]">5 años de trayectoria</span>,
-          ofreciendo soluciones de acuerdo a la necesidad de cada cliente en los diferentes sectores.
-        </p>
-        <p className="text-xl text-gray-700 mb-10 leading-relaxed">
-          Movilizamos carga en todo el territorio colombiano y nos destacamos por la agilidad
-          en los procesos y el compromiso con nuestros clientes.
-        </p>
-        <div className="mt-10">
-          <Link 
-            href="#vision-mision" 
-            className="bg-[#126491] text-white font-bold py-3 px-8 rounded-full inline-flex items-center transform transition-transform hover:scale-105 hover:bg-[#0a507a] group"
-          >
-            Conoce más sobre nosotros
-            <svg className="w-5 h-5 ml-2 transition-transform transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </Link>
-        </div>
-      </div>
-
-      {/* Contenedor de imagen con altura ajustada para móviles */}
-      <div className="md:w-1/2 w-full relative h-[300px] md:h-[500px] z-10">
-        <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl transform transition-all hover:scale-102 group">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/40 to-transparent z-10"></div>
-          <Image
-            src="/camioneros2.webp"
-            alt="Nuestra empresa"
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            priority
-          />
-          <div className="absolute bottom-6 right-6 z-20">
-            <div className="px-4 py-2 bg-white/90 rounded-lg text-[#126491] font-bold shadow-lg">
-              5 años de experiencia
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{/* Visión y Misión - Versión mejorada sin animaciones */}
-<section id="vision-mision" className="py-12 bg-gray-50 relative">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-12 relative">
-      <h2 className="text-5xl font-bold text-[#126491] mb-3">Nuestra Filosofía</h2>
-      <div className="w-24 h-1 bg-[#af5661] mx-auto"></div>
-      <div className="w-16 h-1 bg-[#af5661] mx-auto mt-2"></div>
-    </div>
-
-    <div className="flex flex-col md:flex-row gap-12">
-      <div className="md:w-1/2 bg-white p-10 rounded-xl shadow-xl transform transition-all hover:-translate-y-3 hover:shadow-2xl">
-        <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg transform transition-all hover:rotate-12">
-          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-          </svg>
-        </div>
-        <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Visión</h3>
-        <p className="text-xl text-gray-700 leading-relaxed">
-          Ofrecer el servicio más eficaz y confiable del transporte de carga masiva en el ámbito Nacional,
-          generando siempre un mayor grado de satisfacción de nuestros Clientes. 
-        </p>
-        <p className="text-xl text-gray-700 leading-relaxed mt-4 font-medium">
-          Transportamos de manera segura y eficiente su carga a cualquier destino del territorio nacional.
-        </p>
-        <div className="mt-6 h-1 w-full bg-gradient-to-r from-[#126491] to-transparent"></div>
-      </div>
-
-      <div className="md:w-1/2 bg-white p-10 rounded-xl shadow-xl transform transition-all hover:-translate-y-3 hover:shadow-2xl">
-        <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg transform transition-all hover:rotate-12">
-          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-          </svg>
-        </div>
-        <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Misión</h3>
-        <p className="text-xl text-gray-700 leading-relaxed">
-          Ser la empresa de transporte líder en el mercado nacional, optimizando la efectividad
-          de nuestro servicio para exceder las expectativas de nuestros clientes.
-        </p>
-        <p className="text-xl text-gray-700 leading-relaxed mt-4 font-medium">
-          Nos dedicamos a mejorar continuamente la calidad de vida de nuestros colaboradores
-          y la experiencia de servicio para cada cliente.
-        </p>
-        <div className="mt-6 h-1 w-full bg-gradient-to-r from-[#126491] to-transparent"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="servicios" className="py-20 bg-[#126491]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-2">Nuestros Servicios</h2>
-            <div className="w-20 h-1 bg-[#af5661] mx-auto"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
-              <div className="h-48 relative">
-                <Image 
-                  src="/s11.jpg" 
-                  alt="Transporte Nacional" 
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#126491] mb-3">Transporte Nacional</h3>
-                <p className="text-gray-700 mb-4">
-                  Cubrimos todas las rutas nacionales con una flota moderna y personal capacitado
-                  para garantizar la seguridad de su carga.
+        {/* Quienes Somos - Versión mejorada sin animaciones */}
+        <section id="quienes-somos" className="py-24 bg-white relative overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center gap-16">
+              <div className="md:w-1/2 z-10">
+                <div className="relative mb-8">
+                  <h2 className="text-5xl font-bold text-[#126491] mb-2">Quiénes Somos</h2>
+                  <div className="w-32 h-1 bg-[#af5661] mt-2"></div>
+                  <div className="w-20 h-1 bg-[#af5661] mt-2 ml-6"></div>
+                </div>
+                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                  Somos una empresa Santandereana de transporte de carga, con <span className="font-bold text-[#126491]">5 años de trayectoria</span>,
+                  ofreciendo soluciones de acuerdo a la necesidad de cada cliente en los diferentes sectores.
                 </p>
-                <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
-                  Solicitar servicio →
-                </Link>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
-              <div className="h-48 relative">
-                <Image 
-                  src="/s21.jpg" 
-                  alt="Carga Especializada" 
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#126491] mb-3">Carga Especializada</h3>
-                <p className="text-gray-700 mb-4">
-                  Contamos con vehículos adaptados para transportar mercancías especiales
-                  que requieren condiciones particulares.
+                <p className="text-xl text-gray-700 mb-10 leading-relaxed">
+                  Movilizamos carga en todo el territorio colombiano y nos destacamos por la agilidad
+                  en los procesos y el compromiso con nuestros clientes.
                 </p>
-                <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
-                  Solicitar servicio →
-                </Link>
+                <div className="mt-10">
+                  <Link
+                    href="#vision-mision"
+                    className="bg-[#126491] text-white font-bold py-3 px-8 rounded-full inline-flex items-center transform transition-transform hover:scale-105 hover:bg-[#0a507a] group"
+                  >
+                    Conoce más sobre nosotros
+                    <svg className="w-5 h-5 ml-2 transition-transform transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
-            
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
-              <div className="h-48 relative">
-                <Image 
-                  src="/s3.jpg" 
-                  alt="Seguimiento en Tiempo Real" 
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#126491] mb-3">Seguimiento en Tiempo Real</h3>
-                <p className="text-gray-700 mb-4">
-                  Ofrecemos seguimiento satelital de su carga las 24 horas del día,
-                  brindando tranquilidad y control sobre sus envíos.
-                </p>
-                <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
-                  Solicitar servicio →
-                </Link>
+
+              {/* Contenedor de imagen con altura ajustada para móviles */}
+              <div className="md:w-1/2 w-full relative h-[300px] md:h-[500px] z-10">
+                <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl transform transition-all hover:scale-102 group">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/40 to-transparent z-10"></div>
+                  <Image
+                    src="/camioneros2.webp"
+                    alt="Nuestra empresa"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    priority
+                  />
+                  <div className="absolute bottom-6 right-6 z-20">
+                    <div className="px-4 py-2 bg-white/90 rounded-lg text-[#126491] font-bold shadow-lg">
+                      5 años de experiencia
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-<Equipo />
+        </section>
+        {/* Visión y Misión - Versión mejorada sin animaciones */}
+        <section id="vision-mision" className="py-12 bg-gray-50 relative">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 relative">
+              <h2 className="text-5xl font-bold text-[#126491] mb-3">Nuestra Filosofía</h2>
+              <div className="w-24 h-1 bg-[#af5661] mx-auto"></div>
+              <div className="w-16 h-1 bg-[#af5661] mx-auto mt-2"></div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-12">
+              <div className="md:w-1/2 bg-white p-10 rounded-xl shadow-xl transform transition-all hover:-translate-y-3 hover:shadow-2xl">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg transform transition-all hover:rotate-12">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Visión</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Ofrecer el servicio más eficaz y confiable del transporte de carga masiva en el ámbito Nacional,
+                  generando siempre un mayor grado de satisfacción de nuestros Clientes.
+                </p>
+                <p className="text-xl text-gray-700 leading-relaxed mt-4 font-medium">
+                  Transportamos de manera segura y eficiente su carga a cualquier destino del territorio nacional.
+                </p>
+                <div className="mt-6 h-1 w-full bg-gradient-to-r from-[#126491] to-transparent"></div>
+              </div>
+
+              <div className="md:w-1/2 bg-white p-10 rounded-xl shadow-xl transform transition-all hover:-translate-y-3 hover:shadow-2xl">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg transform transition-all hover:rotate-12">
+                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Misión</h3>
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Ser la empresa de transporte líder en el mercado nacional, optimizando la efectividad
+                  de nuestro servicio para exceder las expectativas de nuestros clientes.
+                </p>
+                <p className="text-xl text-gray-700 leading-relaxed mt-4 font-medium">
+                  Nos dedicamos a mejorar continuamente la calidad de vida de nuestros colaboradores
+                  y la experiencia de servicio para cada cliente.
+                </p>
+                <div className="mt-6 h-1 w-full bg-gradient-to-r from-[#126491] to-transparent"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="servicios" className="py-20 bg-[#126491]">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-2">Nuestros Servicios</h2>
+              <div className="w-20 h-1 bg-[#af5661] mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
+                <div className="h-48 relative">
+                  <Image
+                    src="/s11.jpg"
+                    alt="Transporte Nacional"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#126491] mb-3">Transporte Nacional</h3>
+                  <p className="text-gray-700 mb-4">
+                    Cubrimos todas las rutas nacionales con una flota moderna y personal capacitado
+                    para garantizar la seguridad de su carga.
+                  </p>
+                  <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
+                    Solicitar servicio →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
+                <div className="h-48 relative">
+                  <Image
+                    src="/s21.jpg"
+                    alt="Carga Especializada"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#126491] mb-3">Carga Especializada</h3>
+                  <p className="text-gray-700 mb-4">
+                    Contamos con vehículos adaptados para transportar mercancías especiales
+                    que requieren condiciones particulares.
+                  </p>
+                  <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
+                    Solicitar servicio →
+                  </Link>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
+                <div className="h-48 relative">
+                  <Image
+                    src="/s3.jpg"
+                    alt="Seguimiento en Tiempo Real"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#126491] mb-3">Seguimiento en Tiempo Real</h3>
+                  <p className="text-gray-700 mb-4">
+                    Ofrecemos seguimiento satelital de su carga las 24 horas del día,
+                    brindando tranquilidad y control sobre sus envíos.
+                  </p>
+                  <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
+                    Solicitar servicio →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Equipo />
 
         {/* Sostenibilidad */}
         <section id="sostenibilidad" className="py-20 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-col md:flex-row items-center gap-12">
-      {/* Contenedor de imagen con altura asegurada en móviles */}
-      <div className="w-full md:w-1/2 relative h-[300px] md:h-96 rounded-lg overflow-hidden shadow-xl">
-        <Image
-          src="/paneles1.jpeg"
-          alt="Sostenibilidad Ambiental"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              {/* Contenedor de imagen con altura asegurada en móviles */}
+              <div className="w-full md:w-1/2 relative h-[300px] md:h-96 rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="/paneles1.jpeg"
+                  alt="Sostenibilidad Ambiental"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
 
-      <div className="md:w-1/2 w-full">
-        <h2 className="text-4xl font-bold text-[#126491] mb-6">Sostenibilidad Ambiental</h2>
-        <p className="text-lg text-gray-700 mb-6">
-          Creemos en la necesidad de la transición energética y le apostamos a las nuevas energías renovables,
-          de ahí que con la instalación de paneles solares en nuestra sede principal, aportamos un grano de arena
-          al cuidado del medio ambiente.
-        </p>
-        <p className="text-lg text-gray-700 mb-6">
-          De igual forma acogemos las políticas de reducción en el uso del papel, implementando los trámites digitales,
-          por medio de la facturación electrónica, uso de correos electrónicos y redes sociales, para la publicación
-          de contenidos informativos en el desarrollo de nuestras actividades.
-        </p>
-        <div className="flex mt-8">
-          <Link href="#contacto" className="bg-[#126491] hover:bg-[#0e5377] text-white font-bold py-3 px-8 rounded-full transition-all">
-            Conoce nuestras iniciativas
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+              <div className="md:w-1/2 w-full">
+                <h2 className="text-4xl font-bold text-[#126491] mb-6">Sostenibilidad Ambiental</h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  Creemos en la necesidad de la transición energética y le apostamos a las nuevas energías renovables,
+                  de ahí que con la instalación de paneles solares en nuestra sede principal, aportamos un grano de arena
+                  al cuidado del medio ambiente.
+                </p>
+                <p className="text-lg text-gray-700 mb-6">
+                  De igual forma acogemos las políticas de reducción en el uso del papel, implementando los trámites digitales,
+                  por medio de la facturación electrónica, uso de correos electrónicos y redes sociales, para la publicación
+                  de contenidos informativos en el desarrollo de nuestras actividades.
+                </p>
+                <div className="flex mt-8">
+                  <Link href="#contacto" className="bg-[#126491] hover:bg-[#0e5377] text-white font-bold py-3 px-8 rounded-full transition-all">
+                    Conoce nuestras iniciativas
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         {/* Contacto */}
@@ -464,20 +464,20 @@ export default function Home() {
         </footer>
         <Boton />
         <div className="fixed bottom-5 right-5 flex flex-col space-y-3 z-50">
-        {/* Botón de WhatsApp */}
-        <FloatingWhatsApp
-          phoneNumber="+573153646739"
-          accountName="grupo arte sas"
-          avatar="/logo.png"
-          darkMode={true}
-          statusMessage="Normalmente responde en 1 hora"
-          chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
-          placeholder="Escribe un mensaje"
-          notification={true}
-          chatboxHeight={340}
-        />
+          {/* Botón de WhatsApp */}
+          <FloatingWhatsApp
+            phoneNumber="+573153646739"
+            accountName="grupo arte sas"
+            avatar="/logo.png"
+            darkMode={true}
+            statusMessage="Normalmente responde en 1 hora"
+            chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
+            placeholder="Escribe un mensaje"
+            notification={true}
+            chatboxHeight={340}
+          />
+        </div>
       </div>
-      </div>
-      </>
-      )
+    </>
+  )
 } 
