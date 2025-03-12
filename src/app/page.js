@@ -153,6 +153,80 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+<section id="servicios" className="py-20 bg-[#126491]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-2">Nuestros Servicios</h2>
+            <div className="w-20 h-1 bg-[#af5661] mx-auto"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
+              <div className="h-48 relative">
+                <Image 
+                  src="/s11.jpg" 
+                  alt="Transporte Nacional" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#126491] mb-3">Transporte Nacional</h3>
+                <p className="text-gray-700 mb-4">
+                  Cubrimos todas las rutas nacionales con una flota moderna y personal capacitado
+                  para garantizar la seguridad de su carga.
+                </p>
+                <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
+                  Solicitar servicio →
+                </Link>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
+              <div className="h-48 relative">
+                <Image 
+                  src="/s21.jpg" 
+                  alt="Carga Especializada" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#126491] mb-3">Carga Especializada</h3>
+                <p className="text-gray-700 mb-4">
+                  Contamos con vehículos adaptados para transportar mercancías especiales
+                  que requieren condiciones particulares.
+                </p>
+                <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
+                  Solicitar servicio →
+                </Link>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-all hover:shadow-xl transform hover:-translate-y-2">
+              <div className="h-48 relative">
+                <Image 
+                  src="/s3.jpg" 
+                  alt="Seguimiento en Tiempo Real" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#126491] mb-3">Seguimiento en Tiempo Real</h3>
+                <p className="text-gray-700 mb-4">
+                  Ofrecemos seguimiento satelital de su carga las 24 horas del día,
+                  brindando tranquilidad y control sobre sus envíos.
+                </p>
+                <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
+                  Solicitar servicio →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 <Equipo />
 
         {/* Sostenibilidad */}
