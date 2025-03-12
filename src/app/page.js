@@ -83,17 +83,18 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="md:w-1/2 z-10">
-        <div className="relative h-[500px] rounded-xl overflow-hidden shadow-2xl transform transition-all hover:scale-102 group">
+
+      {/* Contenedor de imagen con altura ajustada para móviles */}
+      <div className="md:w-1/2 w-full relative h-[300px] md:h-[500px] z-10">
+        <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl transform transition-all hover:scale-102 group">
           <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/40 to-transparent z-10"></div>
           <Image
-        src="/camioneros2.webp"
-        alt="Nuestra empresa"
-        layout="fill" // Ajusta automáticamente el tamaño
-        objectFit="cover" // Asegura que la imagen cubra el espacio
-        className="transition-transform duration-500 group-hover:scale-110"
-        priority // Carga la imagen más rápido
-      />
+            src="/camioneros2.webp"
+            alt="Nuestra empresa"
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            priority
+          />
           <div className="absolute bottom-6 right-6 z-20">
             <div className="px-4 py-2 bg-white/90 rounded-lg text-[#126491] font-bold shadow-lg">
               5 años de experiencia
@@ -104,7 +105,6 @@ export default function Home() {
     </div>
   </div>
 </section>
-
 {/* Visión y Misión - Versión mejorada sin animaciones */}
 <section id="vision-mision" className="py-28 bg-gray-50 relative">
   <div className="container mx-auto px-4">
