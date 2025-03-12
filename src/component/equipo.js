@@ -157,7 +157,7 @@ const EquipoTrabajo = () => {
               <div className="text-lg opacity-80">Vehículos diarios</div>
             </div>
             <div className="text-center text-white">
-              <div className="text-5xl font-bold mb-3">15+</div>
+              <div className="text-5xl font-bold mb-3">5+</div>
               <div className="text-lg opacity-80">Años de experiencia</div>
             </div>
             <div className="text-center text-white">

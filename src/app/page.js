@@ -51,8 +51,7 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
-
+        
         {/* Quienes Somos - Versión mejorada sin animaciones */}
         <section id="quienes-somos" className="py-24 bg-white relative overflow-hidden">
           <div className="container mx-auto px-4">
