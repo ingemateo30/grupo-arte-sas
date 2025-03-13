@@ -133,13 +133,6 @@ const EquipoTrabajo = () => {
                 <p className="text-gray-700 leading-relaxed">
                   {item.descripcion}
                 </p>
-                
-                {/* Botón que aparece al hacer hover */}
-                <div className="mt-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                  <button className="px-4 py-2 rounded-lg text-sm font-medium text-[#126491] border border-[#126491] hover:bg-[#126491] hover:text-white transition-colors duration-300">
-                    Más información
-                  </button>
-                </div>
               </div>
             </MotionDiv>
           ))}
