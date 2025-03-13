@@ -53,7 +53,7 @@ export default function Home() {
                 <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl transform transition-all hover:scale-102 group">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/40 to-transparent z-10"></div>
                   <Image
-                    src="/camioneros2.webp"
+                    src="/camioneros2.png"
                     alt="Nuestra empresa"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
