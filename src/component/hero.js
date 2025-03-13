@@ -9,9 +9,9 @@ const HeroSection = () => {
   
   // Imágenes de fondo para el slider
   const backgroundImages = [
-    "/fondo.jpg",
-    "/fond2.jpg",  // Asume que tienes estas imágenes
-    "/fondo3.jpeg",   // Asume que tienes estas imágenes
+    "/1.jpeg",
+    "/255.jpg",  // Asume que tienes estas imágenes
+    "/ca.webp",   // Asume que tienes estas imágenes
   ];
   
   // Textos para cada slide
