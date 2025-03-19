@@ -5,6 +5,7 @@ import Nabvar from '@/component/navbar';
 import Boton from "@/component/boton";
 import Equipo from "@/component/equipo";
 import Hero from "@/component/hero";
+import { motion } from 'framer-motion';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { Leaf, Recycle, Sun, Truck, CloudLightning } from 'lucide-react';
 
@@ -18,105 +19,115 @@ export default function Home() {
       <Hero />
         
         {/* Quienes Somos - Versión mejorada sin animaciones */}
-        <section id="quienes-somos" className="py-24 bg-white relative overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center gap-16">
-              <div className="md:w-1/2 z-10">
-                <div className="relative mb-8">
-                  <h2 className="text-5xl font-bold text-[#126491] mb-2">Quiénes Somos</h2>
-                  <div className="w-32 h-1 bg-[#af5661] mt-2"></div>
-                  <div className="w-20 h-1 bg-[#af5661] mt-2 ml-6"></div>
-                </div>
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Somos una empresa Santandereana de transporte de carga, con <span className="font-bold text-[#126491]">5 años de trayectoria</span>,
-                  ofreciendo soluciones de acuerdo a la necesidad de cada cliente en los diferentes sectores.
-                </p>
-                <p className="text-xl text-gray-700 mb-10 leading-relaxed">
-                  Movilizamos carga en todo el territorio colombiano y nos destacamos por la agilidad
-                  en los procesos y el compromiso con nuestros clientes.
-                </p>
-                <div className="mt-10">
-                  <Link
-                    href="#vision-mision"
-                    className="bg-[#126491] text-white font-bold py-3 px-8 rounded-full inline-flex items-center transform transition-transform hover:scale-105 hover:bg-[#0a507a] group"
-                  >
-                    Conoce más sobre nosotros
-                    <svg className="w-5 h-5 ml-2 transition-transform transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                  </Link>
-                </div>
-              </div>
+        <section id="quienes-somos" className="relative bg-white py-24 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center gap-16">
+            {/* Texto con animación */}
+            <motion.div 
+              className="md:w-1/2 z-10"
+              initial={{ opacity: 0, x: -50 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-5xl font-bold text-[#126491] mb-4 relative">
+                Quiénes Somos
+                <span className="block w-24 h-1 bg-[#af5661] mt-2"></span>
+              </h2>
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                Somos una empresa Santandereana de transporte de carga con <span className="font-bold text-[#126491]">5 años de trayectoria</span>, ofreciendo soluciones adaptadas a cada cliente.
+              </p>
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                Movilizamos carga en todo Colombia con eficiencia, compromiso y rapidez en cada operación.
+              </p>
+              <Link href="#vision-mision" className="bg-[#126491] text-white font-bold py-3 px-8 rounded-full inline-flex items-center transform transition hover:scale-105 hover:bg-[#0a507a] group">
+                Conoce más sobre nosotros
+                <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </Link>
+            </motion.div>
 
-              {/* Contenedor de imagen con altura ajustada para móviles */}
-              <div className="md:w-1/2 w-full relative h-[300px] md:h-[500px] z-10">
-                <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl transform transition-all hover:scale-102 group">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/40 to-transparent z-10"></div>
-                  <Image
-                    src="/camioneros2.png"
-                    alt="Nuestra empresa"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    priority
-                  />
-                  <div className="absolute bottom-6 right-6 z-20">
-                    <div className="px-4 py-2 bg-white/90 rounded-lg text-[#126491] font-bold shadow-lg">
-                      5 años de experiencia
-                    </div>
-                  </div>
-                </div>
+            {/* Imagen con efecto de profundidad */}
+            <motion.div 
+              className="md:w-1/2 w-full relative h-[350px] md:h-[500px] z-10 overflow-hidden rounded-xl shadow-2xl"
+              initial={{ opacity: 0, scale: 0.9 }} 
+              whileInView={{ opacity: 1, scale: 1 }} 
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/50 to-transparent z-10"></div>
+              <Image
+                src="/camioneros2.png"
+                alt="Nuestra empresa"
+                fill
+                className="object-cover transition-transform duration-500 hover:scale-110"
+                priority
+              />
+              <div className="absolute bottom-6 right-6 z-20 px-4 py-2 bg-white/90 rounded-lg text-[#126491] font-bold shadow-lg">
+                5 años de experiencia
               </div>
-            </div>
+            </motion.div>
           </div>
-        </section>
-        {/* Visión y Misión - Versión mejorada sin animaciones */}
-        <section id="vision-mision" className="py-12 bg-gray-50 relative">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12 relative">
-              <h2 className="text-5xl font-bold text-[#126491] mb-3">Nuestra Filosofía</h2>
-              <div className="w-24 h-1 bg-[#af5661] mx-auto"></div>
-              <div className="w-16 h-1 bg-[#af5661] mx-auto mt-2"></div>
-            </div>
+        </div>
+      </section>
 
-            <div className="flex flex-col md:flex-row gap-12">
-              <div className="md:w-1/2 bg-white p-10 rounded-xl shadow-xl transform transition-all hover:-translate-y-3 hover:shadow-2xl">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg transform transition-all hover:rotate-12">
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Visión</h3>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  Ofrecer el servicio más eficaz y confiable del transporte de carga masiva en el ámbito Nacional,
-                  generando siempre un mayor grado de satisfacción de nuestros Clientes.
-                </p>
-                <p className="text-xl text-gray-700 leading-relaxed mt-4 font-medium">
-                  Transportamos de manera segura y eficiente su carga a cualquier destino del territorio nacional.
-                </p>
-                <div className="mt-6 h-1 w-full bg-gradient-to-r from-[#126491] to-transparent"></div>
-              </div>
+      {/* Sección Visión y Misión */}
+      <section id="vision-mision" className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: -50 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-5xl font-bold text-[#126491] mb-3">Nuestra Filosofía</h2>
+            <span className="block w-24 h-1 bg-[#af5661] mx-auto"></span>
+          </motion.div>
 
-              <div className="md:w-1/2 bg-white p-10 rounded-xl shadow-xl transform transition-all hover:-translate-y-3 hover:shadow-2xl">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg transform transition-all hover:rotate-12">
-                  <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Misión</h3>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  Ser la empresa de transporte líder en el mercado nacional, optimizando la efectividad
-                  de nuestro servicio para exceder las expectativas de nuestros clientes.
-                </p>
-                <p className="text-xl text-gray-700 leading-relaxed mt-4 font-medium">
-                  Nos dedicamos a mejorar continuamente la calidad de vida de nuestros colaboradores
-                  y la experiencia de servicio para cada cliente.
-                </p>
-                <div className="mt-6 h-1 w-full bg-gradient-to-r from-[#126491] to-transparent"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Tarjeta Visión */}
+            <motion.div 
+              className="bg-white p-10 rounded-xl shadow-lg transform transition hover:-translate-y-2 hover:shadow-2xl"
+              initial={{ opacity: 0, x: -50 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
               </div>
-            </div>
+              <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Visión</h3>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Ofrecer el servicio más eficaz y confiable del transporte de carga en Colombia.
+              </p>
+            </motion.div>
+
+            {/* Tarjeta Misión */}
+            <motion.div 
+              className="bg-white p-10 rounded-xl shadow-lg transform transition hover:-translate-y-2 hover:shadow-2xl"
+              initial={{ opacity: 0, x: 50 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg">
+                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+              </div>
+              <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Misión</h3>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Ser la empresa de transporte líder en el mercado nacional, superando expectativas con excelencia.
+              </p>
+            </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
 
         <section id="servicios" className="py-20 bg-[#126491]">
@@ -158,10 +169,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#126491] mb-3">Carga Especializada</h3>
+                  <h3 className="text-xl font-bold text-[#126491] mb-3">Carga Seca</h3>
                   <p className="text-gray-700 mb-4">
-                    Contamos con vehículos adaptados para transportar mercancías especiales
-                    que requieren condiciones particulares.
+                  Transportamos abonos, maíz, productos agrícolas en general, 
+                  equipos de herramientas, cerámica
                   </p>
                   <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
                     Solicitar servicio →
