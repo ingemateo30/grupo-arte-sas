@@ -1,13 +1,17 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import Nabvar from '@/component/navbar';
 import Boton from "@/component/boton";
 import Equipo from "@/component/equipo";
 import Hero from "@/component/hero";
 import { motion } from 'framer-motion';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { Leaf, Recycle, Sun, Truck, CloudLightning } from 'lucide-react';
+
+import dynamic from "next/dynamic";
+
+// Cargar MyNavbar solo en el cliente
+const Nabvar = dynamic(() => import("@/component/navbar"), { ssr: false });
 
 export default function Home() {
   return (
@@ -16,118 +20,108 @@ export default function Home() {
 
 
       <div className="flex flex-col min-h-screen">
-      <Hero />
         
-        {/* Quienes Somos - Versión mejorada sin animaciones */}
-        <section id="quienes-somos" className="relative bg-white py-24 overflow-hidden">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center gap-16">
-            {/* Texto con animación */}
-            <motion.div 
-              className="md:w-1/2 z-10"
-              initial={{ opacity: 0, x: -50 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
+        <Hero />
+       
+        
+
+        {/* Nuestra Filosofía con diseño moderno */}
+        <section id="nuestra-filosofia" className="py-24 bg-gray-50 relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-64 h-64 bg-[#126491]/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#126491]/10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+          <div className="container mx-auto px-6 relative z-10">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl font-bold text-[#126491] mb-4 relative">
-                Quiénes Somos
-                <span className="block w-24 h-1 bg-[#af5661] mt-2"></span>
-              </h2>
-              <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Somos una empresa Santandereana de transporte de carga con <span className="font-bold text-[#126491]">5 años de trayectoria</span>, ofreciendo soluciones adaptadas a cada cliente.
+              <div className="inline-block mb-4 px-3 py-1 bg-[#f0f7fc] text-[#126491] font-semibold rounded-full">
+                Nuestra esencia
+              </div>
+              <h2 className="text-5xl font-bold text-gray-900 mb-4">Los pilares que nos guían</h2>
+              <p className="max-w-2xl mx-auto text-xl text-gray-600">
+                Nuestra filosofía define quiénes somos y hacia dónde vamos, guiando cada decisión que tomamos.
               </p>
-              <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                Movilizamos carga en todo Colombia con eficiencia, compromiso y rapidez en cada operación.
-              </p>
-              <Link href="#vision-mision" className="bg-[#126491] text-white font-bold py-3 px-8 rounded-full inline-flex items-center transform transition hover:scale-105 hover:bg-[#0a507a] group">
-                Conoce más sobre nosotros
-                <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </Link>
             </motion.div>
 
-            {/* Imagen con efecto de profundidad */}
-            <motion.div 
-              className="md:w-1/2 w-full relative h-[350px] md:h-[500px] z-10 overflow-hidden rounded-xl shadow-2xl"
-              initial={{ opacity: 0, scale: 0.9 }} 
-              whileInView={{ opacity: 1, scale: 1 }} 
-              transition={{ duration: 0.8 }}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+              {/* Visión */}
+              <motion.div
+                className="bg-white p-10 rounded-2xl shadow-xl overflow-hidden relative border-t-4 border-[#126491]"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#126491]/5 rounded-full -translate-x-6 -translate-y-6"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-[#126491] text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg transform -rotate-6">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Nuestra Visión</h3>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                    Ser reconocidos como la empresa de transporte de carga más eficaz, innovadora y confiable de Colombia, estableciendo nuevos estándares de calidad en el sector.
+                  </p>
+                  <div className="w-full h-1 bg-gradient-to-r from-[#126491] to-transparent rounded-full"></div>
+                </div>
+              </motion.div>
+
+              {/* Misión */}
+              <motion.div
+                className="bg-white p-10 rounded-2xl shadow-xl overflow-hidden relative border-t-4 border-[#af5661]"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#af5661]/5 rounded-full -translate-x-6 -translate-y-6"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-[#af5661] text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg transform rotate-6">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Nuestra Misión</h3>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                    Proporcionar soluciones de transporte de carga eficientes y personalizadas, superando las expectativas de nuestros clientes mediante un servicio de excelencia y compromiso con la innovación.
+                  </p>
+                  <div className="w-full h-1 bg-gradient-to-r from-[#af5661] to-transparent rounded-full"></div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Valores añadidos */}
+            <motion.div
+              className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/50 to-transparent z-10"></div>
-              <Image
-                src="/camioneros2.png"
-                alt="Nuestra empresa"
-                fill
-                className="object-cover transition-transform duration-500 hover:scale-110"
-                priority
-              />
-              <div className="absolute bottom-6 right-6 z-20 px-4 py-2 bg-white/90 rounded-lg text-[#126491] font-bold shadow-lg">
-                5 años de experiencia
-              </div>
+              {[
+                { valor: "Compromiso", color: "#126491" },
+                { valor: "Puntualidad", color: "#af5661" },
+                { valor: "Innovación", color: "#126491" },
+                { valor: "Excelencia", color: "#af5661" }
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-lg flex items-center justify-center text-center"
+                  style={{ borderLeft: `4px solid ${item.color}` }}
+                >
+                  <span className="text-xl font-bold text-gray-800">{item.valor}</span>
+                </div>
+              ))}
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Sección Visión y Misión */}
-      <section id="vision-mision" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: -50 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-5xl font-bold text-[#126491] mb-3">Nuestra Filosofía</h2>
-            <span className="block w-24 h-1 bg-[#af5661] mx-auto"></span>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Tarjeta Visión */}
-            <motion.div 
-              className="bg-white p-10 rounded-xl shadow-lg transform transition hover:-translate-y-2 hover:shadow-2xl"
-              initial={{ opacity: 0, x: -50 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                </svg>
-              </div>
-              <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Visión</h3>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Ofrecer el servicio más eficaz y confiable del transporte de carga en Colombia.
-              </p>
-            </motion.div>
-
-            {/* Tarjeta Misión */}
-            <motion.div 
-              className="bg-white p-10 rounded-xl shadow-lg transform transition hover:-translate-y-2 hover:shadow-2xl"
-              initial={{ opacity: 0, x: 50 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-[#126491] to-[#0a507a] text-white rounded-full flex items-center justify-center mb-6 shadow-lg">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-                </svg>
-              </div>
-              <h3 className="text-3xl font-bold text-[#126491] mb-4">Nuestra Misión</h3>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Ser la empresa de transporte líder en el mercado nacional, superando expectativas con excelencia.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+        </section>
 
 
         <section id="servicios" className="py-20 bg-[#126491]">
@@ -171,8 +165,8 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-[#126491] mb-3">Carga Seca</h3>
                   <p className="text-gray-700 mb-4">
-                  Transportamos abonos, maíz, productos agrícolas en general, 
-                  equipos de herramientas, cerámica
+                    Transportamos abonos, maíz, productos agrícolas en general,
+                    equipos de herramientas, cerámica
                   </p>
                   <Link href="#contacto" className="text-[#af5661] font-semibold hover:text-[#126491] transition-colors">
                     Solicitar servicio →
@@ -207,76 +201,76 @@ export default function Home() {
 
         {/* Sostenibilidad */}
         <section id="sostenibilidad" className="py-10 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-      {/* Elementos decorativos de fondo */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-green-100 rounded-full opacity-20 -translate-y-1/2 translate-x-1/4"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100 rounded-full opacity-20 translate-y-1/2 -translate-x-1/4"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#126491] mb-4">Sostenibilidad Ambiental</h2>
-          <div className="w-16 h-1 bg-[#af5661] mx-auto mb-6"></div>
-          <p className="text-gray-600">Nuestra contribución a un futuro más sostenible para Colombia y el planeta</p>
-        </div>
+          {/* Elementos decorativos de fondo */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-green-100 rounded-full opacity-20 -translate-y-1/2 translate-x-1/4"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100 rounded-full opacity-20 translate-y-1/2 -translate-x-1/4"></div>
 
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-          {/* Imagen con efectos mejorados */}
-          <div className="w-full md:w-1/2 relative">
-            <div className="relative h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl transform md:rotate-1 transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
-              <Image
-                src="/paneles1.jpeg"
-                alt="Sostenibilidad Ambiental"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/60 to-transparent"></div>
-        
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-xl mx-auto text-center mb-12">
+              <h2 className="text-4xl font-bold text-[#126491] mb-4">Sostenibilidad Ambiental</h2>
+              <div className="w-16 h-1 bg-[#af5661] mx-auto mb-6"></div>
+              <p className="text-gray-600">Nuestra contribución a un futuro más sostenible para Colombia y el planeta</p>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+              {/* Imagen con efectos mejorados */}
+              <div className="w-full md:w-1/2 relative">
+                <div className="relative h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl transform md:rotate-1 transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
+                  <Image
+                    src="/paneles1.jpeg"
+                    alt="Sostenibilidad Ambiental"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#126491]/60 to-transparent"></div>
+
+                </div>
+              </div>
+
+              <div className="md:w-1/2 w-full mt-8 md:mt-0">
+                <h3 className="text-2xl font-semibold text-[#126491] mb-6 flex items-center">
+                  Nuestra Visión Sostenible
+                </h3>
+
+                <p className="text-lg text-gray-700 mb-6">
+                  Creemos firmemente en la necesidad de impulsar la transición energética y apostamos por las energías renovables como pilar de nuestro futuro.
+                </p>
+
+                <div className="bg-white p-6 rounded-xl shadow-md mb-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg mb-3 flex items-center text-gray-800">
+                    <CloudLightning className="w-5 h-5 mr-2 text-[#af5661]" />
+                    Energía Solar
+                  </h4>
+                  <p className="text-gray-600">
+                    Con la instalación de paneles solares en nuestra sede principal, aportamos significativamente a la reducción de emisiones de CO₂, disminuyendo nuestra huella de carbono en el transporte de carga colombiano.
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                  <h4 className="font-semibold text-lg mb-3 flex items-center text-gray-800">
+                    <Recycle className="w-5 h-5 mr-2 text-[#af5661]" />
+                    Digitalización Verde
+                  </h4>
+                  <p className="text-gray-600">
+                    Adoptamos políticas de reducción en el uso de papel implementando trámites digitales, facturación electrónica y comunicación digital para minimizar nuestro impacto ambiental en todas nuestras operaciones logísticas.
+                  </p>
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <div className="flex items-center bg-green-50 py-2 px-4 rounded-full">
+                    <Leaf className="w-4 h-4 text-green-600 mr-2" />
+                    <span className="text-green-800 text-sm">Reducción de emisiones</span>
+                  </div>
+                  <div className="flex items-center bg-blue-50 py-2 px-4 rounded-full">
+                    <Truck className="w-4 h-4 text-blue-600 mr-2" />
+                    <span className="text-blue-800 text-sm">Logística sostenible</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="md:w-1/2 w-full mt-8 md:mt-0">
-            <h3 className="text-2xl font-semibold text-[#126491] mb-6 flex items-center">
-              Nuestra Visión Sostenible
-            </h3>
-            
-            <p className="text-lg text-gray-700 mb-6">
-              Creemos firmemente en la necesidad de impulsar la transición energética y apostamos por las energías renovables como pilar de nuestro futuro.
-            </p>
-            
-            <div className="bg-white p-6 rounded-xl shadow-md mb-6 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <h4 className="font-semibold text-lg mb-3 flex items-center text-gray-800">
-                <CloudLightning className="w-5 h-5 mr-2 text-[#af5661]" />
-                Energía Solar
-              </h4>
-              <p className="text-gray-600">
-                Con la instalación de paneles solares en nuestra sede principal, aportamos significativamente a la reducción de emisiones de CO₂, disminuyendo nuestra huella de carbono en el transporte de carga colombiano.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-              <h4 className="font-semibold text-lg mb-3 flex items-center text-gray-800">
-                <Recycle className="w-5 h-5 mr-2 text-[#af5661]" />
-                Digitalización Verde
-              </h4>
-              <p className="text-gray-600">
-                Adoptamos políticas de reducción en el uso de papel implementando trámites digitales, facturación electrónica y comunicación digital para minimizar nuestro impacto ambiental en todas nuestras operaciones logísticas.
-              </p>
-            </div>
-            
-            <div className="mt-8 flex flex-wrap gap-4">
-              <div className="flex items-center bg-green-50 py-2 px-4 rounded-full">
-                <Leaf className="w-4 h-4 text-green-600 mr-2" />
-                <span className="text-green-800 text-sm">Reducción de emisiones</span>
-              </div>
-              <div className="flex items-center bg-blue-50 py-2 px-4 rounded-full">
-                <Truck className="w-4 h-4 text-blue-600 mr-2" />
-                <span className="text-blue-800 text-sm">Logística sostenible</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
 
         {/* Contacto */}
