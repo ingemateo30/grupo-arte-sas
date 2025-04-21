@@ -20,7 +20,7 @@ const GrupoArteNavbar = () => {
 
     // Información rápida para la barra superior
     const infoSlides = [
-        { icon: <Phone size={14} />, text: "Línea Nacional: 01 8000 126 491" },
+        { icon: <Phone size={14} />, text: "Contáctanos: +57315-364-6739" },
         { icon: <Mail size={14} />, text: "contacto@grupoarte.com.co" },
         { icon: <Clock size={14} />, text: "Lunes a Viernes: 8:00 AM - 6:00 PM" },
         { icon: <MapPin size={14} />, text: "Bucaramanga, Santander - Colombia" }
